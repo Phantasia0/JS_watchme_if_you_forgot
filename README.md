@@ -1,5 +1,9 @@
 # Personal Study (계속 진행 중)
 
+## 컨텐츠 파일  
+
+- main.js
+
 ## 현재 라이브러리 리스트
 
 - lodash
