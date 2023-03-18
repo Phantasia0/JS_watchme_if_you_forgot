@@ -24,6 +24,7 @@ ncu -u
 ```
 
 ## 실행 방법 가이드  
+[Node.js](https://nodejs.org/ko) 다운로드 및 설치   
 <p>각 섹션 터미널에서</p>  
 
 ```cli
