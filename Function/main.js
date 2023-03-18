@@ -1,15 +1,21 @@
 //함수(Function)
 
+/* 1. 함수의 기본 형태 */
+/**************************************/
 //함수 선언문(Declaration)
 function helloDe() {}
 
 //함수 표현식(Expression)
 const helloEx = function () {};
 
+/* 2. 함수의 호출 형태 */
+/**************************************/
 //동일하게 사용방법은 같다. 함수호출
 //helloDe();
 //helloEx();
 
+/* 3. 함수에서의 호이스팅 연관 */
+/**************************************/
 //호이스팅(Hoisting) 에서 차이가 난다. 자바스크립트에서는 선언문은 가장 먼저 해석된다는 개념
 helloHo(); //이것도 호출된다. 함수 선언에서 호이스팅이 이루어지기 때문에 가능
 function helloHo() {
@@ -23,7 +29,8 @@ const helloHoEx = function () {
 };
 //helloHoEx(); 에러 안남
 
-//보통 개인적인 설계방법
+/* 4. 보통 개인적인 함수 설계 방법 */
+/**************************************/
 //호이스팅을 이용하여, 추상적으로 함수 호출을 위에서 하고, 아래에 함수구현을 선언문으로 한다.
 
 //world(); //에러 : 이제 aello 기명함수는 표현식이 되어버렸으므로
@@ -33,7 +40,8 @@ const world = function aello() {
 };
 //world(); // 에러 안남
 
-//반환 및 종료
+/* 5. 함수의 반환 및 종료 */
+/**************************************/
 function bello() {
   return "Hello~!"; //함수 종료 역할도 한다
   console.log("Wow~"); //실행X
@@ -66,9 +74,9 @@ function plusA(num) {
 }
 console.log(plusA());
 
-//매개변수 패턴(Parameter pattern)
+/* 6. 매개변수 패턴(Parameter pattern) */
+/**************************************/
 ////기본값(Default value)
-
 function sum(a, b) {
   return a + b;
 }
@@ -81,7 +89,8 @@ function sumFixed(a, b = 1) {
 console.log(sumFixed(1, 3)); //b가 undefined가 아니므로 b = 3
 console.log(sumFixed(7)); //b의 기본값은 1이므로
 
-////구조 분해 할당
+/* 7. 함수에서의 구조 분해 할당 */
+/**************************************/
 const user = {
   name: "John",
   age: 85,
@@ -150,7 +159,8 @@ function sumArgu(...rest) {
 }
 console.log(sumArgu(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
-//화살표 함수(Arrow function)
+/* 8. 화살표 함수(Arrow function) */
+/**************************************/
 function sumA() {}
 const sumB = function () {};
 const sumArrow = () => {}; //자주 사용하게 된다.
@@ -195,7 +205,8 @@ const funcJR = () => [1, 2, 3];
 //function , 화살표함수의 this 해석이 다르고, this에 대해서는 깊은 이해가 필요하므로
 //this 파트에서 뒤에서 설명
 
-//즉시실행함수(IIFE, Immediately-Invoked Function Expression)
+/* 9. 즉시실행함수(IIFE, Immediately-Invoked Function Expression) */
+/**************************************/
 const aFE = 7;
 
 const double = () => {
@@ -226,7 +237,8 @@ double();
 })(window, document); //window 객체, document 객체
 //이런 방식으로 코드의 난독화를 할 수 있다.
 
-//콜백함수(Callback)
+/* 10. 콜백함수(Callback) */
+/**************************************/
 const aCB = (callback) => {
   console.log("A");
   callback();
@@ -249,7 +261,7 @@ sumCB(3, 7, (value) => {
   console.log(value);
 });
 
-//콜백함수수의 다양한 활용
+//콜백함수의 다양한 활용
 //https://www.gstatic.com/webp/gallery/3.jpg
 const loadImage = (url, cb) => {
   const imgEl = document.createElement("img");
@@ -267,7 +279,8 @@ loadImage("https://www.gstatic.com/webp/gallery/3.jpg", (imgEl) => {
   containerEl.append(imgEl); //메모리 상에 만들어져 있는 이미지 요소를 연결시킨다.
 });
 
-//재귀(Recursive)
+/* 11. 재귀함수(Recursive) */
+/**************************************/
 let i = 0;
 const aRC = () => {
   console.log("A");
@@ -292,7 +305,8 @@ const getRootUser = (user) => {
 };
 console.log(getRootUser(userRD));
 
-//호출 스케줄링(Scheduling a function call)
+/* 12. 호출 스케줄링(Scheduling a function call) */
+/**************************************/
 //함수의 호출을 지연하거나 반복적으로 호출할수 있게 해주는 개념
 
 const hello = () => {
@@ -311,7 +325,8 @@ h1El.addEventListener("click", () => {
 });
 const every = setInterval(hello, 2000);
 
-/*  ***THIS*** 키워드 */
+/* 13. 함수에서의 this 키워드 */
+/**************************************/
 //중요
 //반드시 명확히 이해해야한다.
 //일반 함수의 this는 호출 위치에서 정의
