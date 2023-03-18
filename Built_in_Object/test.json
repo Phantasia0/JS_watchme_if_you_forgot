@@ -1,0 +1,10 @@
+{
+  "string": "Hello world!",
+  "number": 123,
+  "Null": null,
+  "Object": {
+    "a": 1,
+    "b": "B"
+  },
+  "Array": [1, 2, 3]
+}
