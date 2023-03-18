@@ -1,6 +1,5 @@
-//기본 원리
-//prototype
-
+/* 1. 기본원리. prototype */
+/**************************************/
 //const fruits = ['Apple','Banana', 'Cherry' ];
 const fruits = new Array("Apple", "Banana", "Cherry");
 console.log(fruits);
@@ -54,7 +53,8 @@ console.log(userB.getFullName());
 //하지만 이런 prototype 기법을,
 //ES6에서 클래스를 도입하여 조금 더 고도화된 기법을 적용할 수 있게 되었다.
 
-//클래스 방식 , ES6 Classes
+/* 2. 클래스. ES6 Classes */
+/**************************************/
 class UserCl {
   constructor(first, last) {
     this.firstName = first;
