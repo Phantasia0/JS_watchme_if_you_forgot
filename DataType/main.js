@@ -1,11 +1,13 @@
-//문자열 데이터형
+/* 1. 문자 데이터형 */
+/**************************************/
 const string1 = "Hello";
 const string2 = "Hello";
 const string3 = `Hello ${string1} ?!`; //템플릿 리터럴
 
 console.log(string3);
 
-//숫자 데이터형
+/* 2. 숫자 데이터형 */
+/**************************************/
 const number = 123;
 console.log(number + 1);
 console.log(number + undefined); // NaN (Not a Number)
@@ -23,7 +25,8 @@ console.log(typeof (a + b).toFixed(1));
 console.log(Number((a + b).toFixed(1)));
 console.log(typeof Number((a + b).toFixed(1)));
 
-//Boolean 데이터형
+/* 3. Boolean 데이터형 */
+/**************************************/
 const boolA = true;
 const boolB = false;
 
@@ -31,6 +34,8 @@ if (boolA) {
   console.log("Hello");
 }
 
+/* 4. Null 데이터형 */
+/**************************************/
 //null 데이터형. 명시적으로 값이 존재하지 않는다를 의미하도록 작성하기 위함
 let age = null;
 console.log(age);
@@ -39,6 +44,8 @@ setTimeout(function () {
   //console.log(age);
 }, 1000);
 
+/* 5. Undefined 데이터형 */
+/**************************************/
 //undefined 데이터형. 값이 할당되지 않았음을 의미 (암시적으로 자동으로 엔진)
 let unAge;
 console.log(unAge);
@@ -47,7 +54,8 @@ setTimeout(function () {
   //console.log(unAge);
 }, 1000);
 
-//Array(배열) 데이터형
+/* 6. Array 데이터형 */
+/**************************************/
 const fruits = new Array("Apple", "Banana", "Cherry"); //생성자 함수, 자바스크립트 클래스
 console.log(fruits);
 const fruitsLit = ["Apple", "Banana", "Cherry"]; //배열 리터럴이라고 부른다.
@@ -57,7 +65,8 @@ console.log(fruitsLit.length);
 console.log(fruitsLit[fruitsLit.length - 1]);
 console.log(fruitsLit[0]);
 
-//Object 데이터형
+/* 7. Object 데이터형 */
+/**************************************/
 const user = {
   name: "John",
   age: 85,
@@ -115,7 +124,8 @@ console.log(users[0]);
 console.log(users[0].name);
 console.log(users[0]["name"]);
 
-//Function 데이터형
+/* 8. Function 데이터형 */
+/**************************************/
 function hello() {
   console.log("Hello");
 }
@@ -151,7 +161,8 @@ const bFunc = function (c) {
 //bFunc(1234);
 bFunc(aFunc);
 
-//형 변환(Type Conversion)
+/* 9. 형 변환(Type Conversion) */
+/**************************************/
 //자바스크립트의 데이터형이 바뀐다.
 const aTC = 1; //Number
 const bTC = "1"; //String
@@ -163,7 +174,8 @@ const bTCZ = false;
 console.log(aTCZ === bTCZ);
 console.log(aTCZ == bTCZ);
 
-//참과 거짓(Truthy & Falsy)
+/* 10. 참과 거짓(Truthy & Falsy) */
+/**************************************/
 if (true) {
   console.log("참!");
 }
