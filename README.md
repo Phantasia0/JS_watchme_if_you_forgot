@@ -1,4 +1,5 @@
-# Personal Study (계속 진행 중)
+# Personal Study  
+(추가 혹은 수정 하실 것 있으면 PR 주세요!)
 
 ## 컨텐츠 파일  
 
